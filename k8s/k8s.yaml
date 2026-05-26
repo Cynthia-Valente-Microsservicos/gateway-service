@@ -19,6 +19,8 @@ spec:
           ports:
             - containerPort: 8080
           env:
+            - name: CORS_ALLOWED_CREDENTIALS
+              value: "true"
             - name: AUTH_SERVICE_URL
               value: "http://auth:8080"
             - name: ACCOUNT_SERVICE_URL
