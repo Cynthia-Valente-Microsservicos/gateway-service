@@ -79,7 +79,7 @@ public class AuthorizationFilter implements GlobalFilter {
             .flatMap(response -> {
                 if (response != null && response.hasBody() && response.getBody() != null) {
                     final Map<String, String> map = response.getBody();
-                    String idAccount = map.get("idAccount");
+                    String idAccount = map.get("id-account");
                     String role = map.get("role");
                     logger.debug("solve: id account: " + idAccount);
                     logger.debug("solve: role: " + role);
